@@ -18,6 +18,13 @@ public final class App {
 
         System.out.println("Antes: " + hashMap);
 
+        eiminarNulos(hashMap);
+
+        System.out.println("Después: " + hashMap);
+    }
+
+    public static void eiminarNulos(HashMap hashMap) {
+
         Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, String> entry = iterator.next();
@@ -25,7 +32,5 @@ public final class App {
                 iterator.remove();
             }
         }
-
-        System.out.println("Después: " + hashMap);
     }
 }
